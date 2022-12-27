@@ -59,7 +59,7 @@ public class PeopleController {
 		try {
 			String hotspotPath = req.getServletContext().getRealPath("/data-files/hotspot-data.CSV");
 			fis = new FileInputStream(hotspotPath);
-			isr = new InputStreamReader(fis);
+			isr = new InputStreamReader(fis, "UTF-8");
 			br = new BufferedReader(isr);
 			br.readLine();
 			while (true) {

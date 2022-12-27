@@ -52,7 +52,7 @@ public class TransportController {
 		{
 			String Path = req.getServletContext().getRealPath("/data-files/data.csv");
 			fis = new FileInputStream(Path);
-			isr = new InputStreamReader(fis);
+			isr = new InputStreamReader(fis, "UTF-8");
 			br = new BufferedReader(isr);
 			br.readLine();
 			while (true) {
@@ -257,7 +257,7 @@ public class TransportController {
 		{
 			String Path = req.getServletContext().getRealPath("/data-files/hotspot-data2.csv");
 			fis = new FileInputStream(Path);
-			isr = new InputStreamReader(fis);
+			isr = new InputStreamReader(fis, "UTF-8");
 			br = new BufferedReader(isr);
 			br.readLine();
 			while (true) {

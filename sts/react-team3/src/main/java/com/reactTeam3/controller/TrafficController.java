@@ -52,7 +52,7 @@ public class TrafficController {
 			
 			String spotPath = req.getServletContext().getRealPath("/data-files/hotspot-data.CSV");
 			fis = new FileInputStream(spotPath);
-			isr = new InputStreamReader(fis);
+			isr = new InputStreamReader(fis, "UTF-8");
 			br = new BufferedReader(isr);
 			br.readLine();
 			
