@@ -29,7 +29,7 @@ import com.reactTeam3.dto.Hotspot;
 import com.reactTeam3.dto.RoadTraffic;
 
 @Controller
-@RequestMapping(path = { "traffic" })
+@RequestMapping(path = { "/traffic" })
 public class TrafficController {
 	
 	// 서울 핫플레이스 50개 장소 그룹으로 가져오기
@@ -102,7 +102,7 @@ public class TrafficController {
 	
 	// 도로소통현황
 	
-	@GetMapping(path = { "load-traffic-stts" })
+	@GetMapping(path = { "/load-traffic-stts" })
 	@ResponseBody
 	// public ArrayList<HashMap<String, Object>> loadTrafficIdx(String string, RoadTraffic roadTrafficInfo) {
 	public ArrayList<HashMap<String, Object>> loadTrafficIdx(String string, RoadTraffic roadTrafficInfo) {
@@ -176,7 +176,7 @@ public class TrafficController {
 	
 	// 실시간 cctv 영상
 		
-		@GetMapping(path = { "load-cctv" })
+		@GetMapping(path = { "/load-cctv" })
 		@ResponseBody
 		public ArrayList<HashMap<String, Object>> loadCctv(String type) {
 			
