@@ -19,7 +19,7 @@ function WeatherAirDirty({ airDirtyData }) {
     <Box sx={{ width: "100%" }}>
       <div>
         <h3>대기오염 현황</h3>
-        <h5>{airDirtyData.ANNOUNCE_TIME}</h5>
+        <h5>{airDirtyData.WEATHER_TIME}</h5>
       </div>
       <br />
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>

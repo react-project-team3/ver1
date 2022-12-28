@@ -12,7 +12,7 @@ function WeatherAirList({ airData }) {
       <TimelineList>
         <div>
           <h3>대기/환경</h3>
-          <h5>{airData.ANNOUNCE_TIME}</h5>
+          <h5>{airData.WEATHER_TIME}</h5>
         </div>
         <br />
         <TimelineItem

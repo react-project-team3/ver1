@@ -93,7 +93,7 @@ function Weather(props) {
 
       const newWeatherData = {
         AREA_NM: selectedSpot,
-        ANNOUNCE_TIME: stts.getElementsByTagName("ANNOUNCE_TIME")[0].textContent,
+        WEATHER_TIME: stts.getElementsByTagName("WEATHER_TIME")[0].textContent,
         MAX_TEMP: stts.getElementsByTagName("MAX_TEMP")[0].textContent,
         MIN_TEMP: stts.getElementsByTagName("MIN_TEMP")[0].textContent,
         PCP_MSG: stts.getElementsByTagName("PCP_MSG")[0].textContent,
@@ -101,14 +101,14 @@ function Weather(props) {
       };
 
       const newNewsData = {
-        ANNOUNCE_TIME: stts.getElementsByTagName("ANNOUNCE_TIME")[0].textContent,
+        WEATHER_TIME: stts.getElementsByTagName("WEATHER_TIME")[0].textContent,
         WARN_VAL: stts.getElementsByTagName("WARN_VAL")[0].textContent,
         WARN_STRESS: stts.getElementsByTagName("WARN_STRESS")[0].textContent,
         WARN_MSG: stts.getElementsByTagName("WARN_MSG")[0].textContent,
       };
 
       const newAirDirtyData = {
-        ANNOUNCE_TIME: stts.getElementsByTagName("ANNOUNCE_TIME")[0].textContent,
+        WEATHER_TIME: stts.getElementsByTagName("WEATHER_TIME")[0].textContent,
         PM25_INDEX: stts.getElementsByTagName("PM25_INDEX")[0].textContent,
         PM25: stts.getElementsByTagName("PM25")[0].textContent,
         PM10_INDEX: stts.getElementsByTagName("PM10_INDEX")[0].textContent,
@@ -119,7 +119,7 @@ function Weather(props) {
 
       const newAirData = {
           AREA_NM: selectedSpot,
-          ANNOUNCE_TIME: stts.getElementsByTagName("ANNOUNCE_TIME")[0].textContent,
+          WEATHER_TIME: stts.getElementsByTagName("WEATHER_TIME")[0].textContent,
           UV_INDEX: stts.getElementsByTagName("UV_INDEX")[0].textContent,
           UV_INDEX_LVL: stts.getElementsByTagName("UV_INDEX_LVL")[0].textContent,
           UV_MSG: stts.getElementsByTagName("UV_MSG")[0].textContent,

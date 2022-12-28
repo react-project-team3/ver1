@@ -22,7 +22,7 @@ function WeatherList({ weatherData }) {
     <Box sx={{ width: "100%" }}>
       <div>
         <h3>실시간 날씨 예보</h3>
-        <h5>{weatherData.ANNOUNCE_TIME}</h5>
+        <h5>{weatherData.WEATHER_TIME}</h5>
       </div>
       <br />
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
