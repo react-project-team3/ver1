@@ -27,8 +27,10 @@ function News() {
 
   useEffect(() => {
     const loadNews = async () => {
-      const response = await axios.get(`/news/load-news?start=${startNum}&query=${query}`);
-      // const response = await axios.get(`/news?start=${startNum}&query=${query}`);
+      const response = await axios.get(
+        `/react-team3/news/load-news?start=${startNum}&query=${query}`
+      );
+      // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);
       setArticles(response.data);
     };
     loadNews();

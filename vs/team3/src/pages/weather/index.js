@@ -48,14 +48,14 @@ function Weather(props) {
   // SpotList
   const loadSpotName = async (e) => {
     const response = await axios.get (
-      `/weather/load-spotByGroup?group=${e}`
+      `/react-team3/weather/load-spotByGroup?group=${e}`
     )
     setSpots(response.data);
   };
 
   const loadSpotSearch = async (e) => {
     const response = await axios.get (
-      `/weather/load-spotBySearch?spot=${e}`
+      `/react-team3/weather/load-spotBySearch?spot=${e}`
     )
     setSpots(response.data);
   };
@@ -101,7 +101,7 @@ function Weather(props) {
       };
 
       const newNewsData = {
-        WEATHER_TIME: stts.getElementsByTagName("WEATHER_TIME")[0].textContent,
+        WEATHER_TIME: stts.getElementsByTagName("ANNOUNCE_TIME")[0].textContent,
         WARN_VAL: stts.getElementsByTagName("WARN_VAL")[0].textContent,
         WARN_STRESS: stts.getElementsByTagName("WARN_STRESS")[0].textContent,
         WARN_MSG: stts.getElementsByTagName("WARN_MSG")[0].textContent,
@@ -138,14 +138,14 @@ function Weather(props) {
 
   useEffect(() => {
     const loadWeather = async () => {
-      // const response = await axios.get(`/news?start=${startNum}&query=${query}`);
+      // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);
     };
     loadWeather();
   }, []);
 
   useEffect(() => {
     const loadWeather = async () => {
-      // const response = await axios.get(`/news?start=${startNum}&query=${query}`);
+      // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);
     };
     loadWeather();
   }, []);

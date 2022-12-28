@@ -52,9 +52,9 @@ function People() {
   useEffect(() => {
     const loadHotspot = async () => {
       const response = await axios.get(
-        `/people/load-hotspot-data?startNum=${startNum}&endNum=${endNum}`
+        `/react-team3/people/load-hotspot-data?startNum=${startNum}&endNum=${endNum}`
       );
-      // const response = await axios.get(`/news?start=${startNum}&query=${query}`);
+      // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);
       // console.log(response.data);
       setHotspots(response.data);
     };
@@ -93,14 +93,14 @@ function People() {
         };
         
         // 2번째 요청
-        const url2 = `/people/load-congestions?spotId=${spotId}`;
+        const url2 = `/react-team3/people/load-congestions?spotId=${spotId}`;
         
         const response2 = await axios.request(url2);
         console.log(response2.data)
         setData({ stts: data3, congestions: response2.data });
 
         // 3번째 요청
-        const url3 = `/people/load-spotId?spotName=${spot.spotName}`;
+        const url3 = `/react-team3/people/load-spotId?spotName=${spot.spotName}`;
       }      
     }
     loadData();

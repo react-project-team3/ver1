@@ -75,24 +75,25 @@ function Transport() {
   const [busInfoDetail, setBusInfoDetail] = useState([]);
 
   const loadBusSpotName = async (e) => {
-    const response = await axios.get(`/transport/load-spotByGroup?group=${e}`);
-    // const response = await axios.get(`/news?start=${startNum}&query=${query}`);;
+    const response = await axios.get(`/react-team3/transport/load-spotByGroup?group=${e}`);
+    // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);;
     setBusSpots(response.data);
   };
 
   const loadBusSpotNameBySearch = async (e) => {
-    const response = await axios.get(`/transport/load-spotBySearch?spot=${e}`);
-    // const response = await axios.get(`/news?start=${startNum}&query=${query}`);;
+    const response = await axios.get(`/react-team3/transport/load-spotBySearch?spot=${e}`);
+    // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);;
     setBusSpots(response.data);
   };
 
   useEffect(() => {
     const loadBusStnInfo = async () => {
-      const response = await axios.get(`/transport/load-busInfoStn?spot=${selectedBusSpot}`);
-      // const response = await axios.get(`/news?start=${startNum}&query=${query}`);
+      const response = await axios.get(
+        `/react-team3/transport/load-busInfoStn?spot=${selectedBusSpot}`
+      );
+      // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);
 
       setBusInfoStn(response.data);
-      console.log(response.data);
     };
     loadBusStnInfo();
   }, [selectedBusSpot]);
@@ -100,40 +101,41 @@ function Transport() {
   useEffect(() => {
     const loadBusDetailInfo = async () => {
       const response = await axios.get(
-        `/transport/load-busInfoDetail?spot=${selectedBusSpot}&stn=${busStn}`
+        `/react-team3/transport/load-busInfoDetail?spot=${selectedBusSpot}&stn=${busStn}`
       );
-      // const response = await axios.get(`/news?start=${startNum}&query=${query}`);
+      // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);
       setBusInfoDetail(response.data);
     };
     loadBusDetailInfo();
   }, [busStn]);
 
   const loadBikeSpotName = async (e) => {
-    const response = await axios.get(`/transport/load-spotByGroup?group=${e}`);
-    // const response = await axios.get(`/news?start=${startNum}&query=${query}`);;
+    const response = await axios.get(`/react-team3/transport/load-spotByGroup?group=${e}`);
+    // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);;
     setBikeSpots(response.data);
   };
 
   const loadBikeSpotNameBySearch = async (e) => {
-    const response = await axios.get(`/transport/load-spotBySearch?spot=${e}`);
-    // const response = await axios.get(`/news?start=${startNum}&query=${query}`);;
+    const response = await axios.get(`/react-team3/transport/load-spotBySearch?spot=${e}`);
+    // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);;
     setBikeSpots(response.data);
   };
 
   useEffect(() => {
     const loadBikeInfo = async () => {
-      const response = await axios.get(`/transport/load-bikeInfo?spot=${selectedBikeSpot}`);
-      // const response = await axios.get(`/news?start=${startNum}&query=${query}`);
+      const response = await axios.get(
+        `/react-team3/transport/load-bikeInfo?spot=${selectedBikeSpot}`
+      );
+      // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);
       setBikeInfo(response.data);
-      console.log(response.data);
     };
     loadBikeInfo();
   }, [selectedBikeSpot]);
 
   useEffect(() => {
     const loadStationName = async () => {
-      const response = await axios.get(`/transport/load-station?name=${station}`);
-      // const response = await axios.get(`/news?start=${startNum}&query=${query}`);;
+      const response = await axios.get(`/react-team3/transport/load-station?name=${station}`);
+      // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);;
       setStations(response.data);
     };
     loadStationName();
@@ -142,9 +144,9 @@ function Transport() {
   useEffect(() => {
     const loadStationInfo = async () => {
       const response = await axios.get(
-        `/transport/load-subway?station=${selectedStation}&line=${line}&start=${start}&end=${end}`
+        `/react-team3/transport/load-subway?station=${selectedStation}&line=${line}&start=${start}&end=${end}`
       );
-      // const response = await axios.get(`/news?start=${startNum}&query=${query}`);
+      // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);
       setStationInfo(response.data);
     };
     loadStationInfo();

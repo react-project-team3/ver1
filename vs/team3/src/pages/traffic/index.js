@@ -58,9 +58,9 @@ function Traffic(props) {
   // SpotList
   const loadSpotName = async (e) => {
     const response = await axios.get(
-      `/traffic/load-spotGroup?group=${e}`
+      `/react-team3/traffic/load-spotGroup?group=${e}`
     );
-    // const response = await axios.get(`/news?start=${startNum}&query=${query}`);;
+    // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);;
     setSpots(response.data);
   };
 
@@ -69,7 +69,7 @@ function Traffic(props) {
   // useEffect(() => {
   //   const loadhotspotData = async () => {
   //     const response = await axios.get(
-  //       `/traffic/load-hotspot-data`
+  //       `/react-team3/traffic/load-hotspot-data`
   //     );
   //     console.log(response.data);
   //   };
@@ -79,9 +79,9 @@ function Traffic(props) {
   useEffect(() => {
     const loadTrafficStts = async () => {
       const response = await axios.get(
-        `/traffic/load-traffic-stts?start=${start}&end=${end}&areaNM=${areaNM}`
+        `/react-team3/traffic/load-traffic-stts?start=${start}&end=${end}&areaNM=${areaNM}`
       );
-      // const response = await axios.get(`/news?start=${startNum}&query=${query}`);
+      // const response = await axios.get(`/react-team3/news?start=${startNum}&query=${query}`);
       setTrafficTable(response.data);
     };
     loadTrafficStts();
@@ -150,7 +150,7 @@ function Traffic(props) {
   useEffect(() => {
     const loadCctv = async () => {
       const response = await axios.get(
-        `/traffic/load-cctv?type=${type}`
+        `/react-team3/traffic/load-cctv?type=${type}`
       );
       setCctv(response.data);
     };

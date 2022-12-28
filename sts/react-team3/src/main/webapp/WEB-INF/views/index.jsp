@@ -18,7 +18,7 @@
 <link
 	href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
 	rel="stylesheet" />
-<script defer="defer" src="/react-team3/react/team3/static/js/main.75c5c990.js"></script>
+<script defer="defer" src="/react-team3/react/team3/static/js/main.b0eae587.js"></script>
 </head>
 <body>
 	<div id="root"></div>
